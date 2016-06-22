@@ -1,4 +1,4 @@
-package javacustoms;
+package com.basic.javacustoms;
 
 /**
  * Created by gurinder on 22/6/16.

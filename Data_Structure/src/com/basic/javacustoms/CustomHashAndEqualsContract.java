@@ -1,4 +1,4 @@
-package javacustoms;
+package com.basic.javacustoms;
 
 import java.util.*;
 
