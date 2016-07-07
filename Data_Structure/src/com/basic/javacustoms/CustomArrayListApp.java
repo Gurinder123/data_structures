@@ -1,8 +1,6 @@
 package com.basic.javacustoms;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by gurinder on 22/6/16.

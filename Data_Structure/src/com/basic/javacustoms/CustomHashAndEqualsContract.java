@@ -18,14 +18,14 @@ public class CustomHashAndEqualsContract {
         TreeSet<Employee> emTreeSet = new TreeSet(new EmployeeSorter());
         emTreeSet.addAll(employeeSet);
 
-        for (Employee employee : emTreeSet)
-            System.out.println(employee);
-        System.out.println();
-        List<Employee> employeeList = new ArrayList<>(employeeSet);
-        Collections.sort(employeeList, (e1, e2) -> {
-            return e1.getName().compareTo(e2.getName());
-        });
-        employeeList.forEach(System.out::println);
+        Map<String, Employee> map = new HashMap<>();
+        Employee e1 = new Employee(1, "Gurinder Singh", "XI309");
+        map.computeIfAbsent("Gurinder", s -> e1);
+        map.computeIfAbsent("Gurinder", s -> new Employee(2, "Gurinder Singh", "XI309"));
+
+        System.out.println(map);
+        Set<Map.Entry<String, Employee>> entries = map.entrySet();
+        entries.stream().filter(stringEmployeeEntry -> stringEmployeeEntry.getKey().equals("Gurinder")).forEach(System.out::print);
     }
 
 
