@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by gurinder on 30/5/16.
  */
 public class TowerOfHanoi {
-
+    int $_myvar;
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int numberOfRings = input.nextInt();
@@ -22,5 +22,6 @@ public class TowerOfHanoi {
             System.out.println(numberOfRings + " disk " + from + " " + to);
             createTower(numberOfRings - 1, aux, from, to);
         }
+
     }
 }
