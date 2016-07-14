@@ -5,23 +5,46 @@ import java.util.Iterator;
 /**
  * Created by gurinder on 13/7/16.
  */
-public class CustomSingleLinkedList<E> implements Iterable<E> {
-    Node root;
+public class CustomSingleLinkedListApp {
+    public static void main(String[] args) {
+        CustomSingleLinkedList<Integer> linkedList = new CustomSingleLinkedList<>();
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        linkedList.add(4);
+        for (Integer linkedList1 : linkedList) {
+            System.out.print(linkedList1 + " ");
+        }
+        System.out.println("After Removing");
+        linkedList.remove(1);
+
+        Iterator<Integer> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+}
+
+class CustomSingleLinkedList<E> implements Iterable<E> {
+    private Node root;
+    private Node element;
+    private Node previous;
 
     @Override
     public Iterator<E> iterator() {
-        final Node[] iterate = {root};
-        final Node[] next = {null};
+        element = root;
         final Iterator<E> iterator = new Iterator<E>() {
             @Override
             public boolean hasNext() {
-                return iterate[0].next != null;
+                return element != null;
             }
 
             @Override
             public E next() {
-                next[0] = iterate[0];
-                return (E) next[0].data;
+                previous = element;
+                element = element.next;
+                return (E) previous.data;
             }
         };
         return iterator;
@@ -37,22 +60,8 @@ public class CustomSingleLinkedList<E> implements Iterable<E> {
         }
     }
 
-    public static void main(String[] args) {
-        CustomSingleLinkedList<Integer> linkedList = new CustomSingleLinkedList<>();
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-        linkedList.add(4);
-        for (Integer linkedList1 : linkedList) {
-            System.out.println(linkedList1);
-        }
-        System.out.println("After Removing");
-        linkedList.remove(1);
-        linkedList.printAll();
-    }
 
-
-    private void remove(E val) {
+    public void remove(E val) {
         if (root == null) {
             System.out.print("Empty List");
             return;
@@ -75,7 +84,7 @@ public class CustomSingleLinkedList<E> implements Iterable<E> {
 
     }
 
-    private void printAll() {
+    public void printAll() {
         if (root == null) {
             System.out.print("Empty List");
             return;
@@ -88,7 +97,7 @@ public class CustomSingleLinkedList<E> implements Iterable<E> {
         }
     }
 
-    private void add(E data) {
+    public void add(E data) {
         Node newNode = new Node(data, null);
         if (root == null) {
             root = newNode;
@@ -105,4 +114,5 @@ public class CustomSingleLinkedList<E> implements Iterable<E> {
 
 
     }
+
 }
