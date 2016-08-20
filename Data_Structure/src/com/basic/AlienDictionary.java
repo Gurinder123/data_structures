@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * Created by gurinder on 24/7/16.
+ * creating an alien dictionary and arrange in order
  */
 public class AlienDictionary {
     public static void main(String[] args) {

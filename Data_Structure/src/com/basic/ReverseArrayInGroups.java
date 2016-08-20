@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 /**
  * Created by Gurinder on 8/20/2016.
+ *  Program to reverse array in group example arr ={1,2,3,4,5,6,7,8,9}
+ *  input = 3
+ *  output= [3 2 1 6 5 4 9 8 7 10]
  */
+
 public class ReverseArrayInGroups {
     static int count = 0;
     static int start = 0;

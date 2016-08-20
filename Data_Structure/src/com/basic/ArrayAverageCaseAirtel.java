@@ -2,6 +2,11 @@ package com.basic;
 
 /**
  * Created by gurinder on 6/6/16.
+ *
+ * Divide single array into 2 arrays and check whether they are having same average or not
+ * example: original array: {0, 2, 1, 5, 7, 9}
+ *  after dividing array
+ *  Array1:[0 5 7 ] and Array2:[2 1 9 ] have same average that is 4
  */
 public class ArrayAverageCaseAirtel {
     private static int a[];

@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 24/7/16.
+ *
+ *  find if two singly list are intersecting
  */
 public class LinkedListIntersection {
     public static void main(String[] args) {

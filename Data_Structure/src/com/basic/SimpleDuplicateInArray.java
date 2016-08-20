@@ -3,6 +3,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 31/5/16.
+ *
+ *  simple find duplicate in an array
  */
 public class SimpleDuplicateInArray {
     public static void main(String[] args) {

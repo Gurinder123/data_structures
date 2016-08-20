@@ -2,6 +2,7 @@ package com.basic;
 
 /**
  * Created by Gurinder on 7/8/2016.
+ *  find duplicate in a single loop hashtable style
  */
 public class SingleLoopDuplicate {
 

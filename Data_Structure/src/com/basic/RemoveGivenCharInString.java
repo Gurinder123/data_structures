@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 1/6/16.
+ *
+ *  Remove the given character from a string
  */
 public class RemoveGivenCharInString {
     public static void main(String[] args) {

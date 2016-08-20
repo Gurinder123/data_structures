@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 1/6/16.
+ *
+ *  all combination of a string
  */
 public class StringAllCombinations {
     public static void main(String[] args) {

@@ -6,7 +6,14 @@ package com.basic.sortings;
 public class InserionSort {
     public static void main(String[] args) {
         int[] a = {2, 1, 11, 3, 4, 8, 19, 1, 2, 45, 7};
-        int temp = 0, j, key;
+        a = sort(a);
+
+        for (int i : a)
+            System.out.print(i + " ");
+    }
+
+    public static int[] sort(int[] a) {
+        int j, key;
         for (int i = 1; i < a.length; i++) {
             key = a[i];
             j = i - 1;
@@ -16,8 +23,7 @@ public class InserionSort {
             }
             a[j + 1] = key;
         }
-        for (int i : a)
-            System.out.print(i + " ");
+        return a;
     }
 }
 

@@ -2,6 +2,10 @@ package com.basic;
 
 import static java.lang.Math.abs;
 
+/**
+ * Created by gurinder on 6/6/16.
+ * find if there is any duplicate in an array
+ **/
 public class DuplicateInArray {
 
     public static void main(String[] args) {

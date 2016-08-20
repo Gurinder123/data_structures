@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 24/7/16.
+ *
+ *  find if there ia any loop between in singlylinkedlist
  */
 public class LinkedListCircularLoop {
     public static void main(String[] args) {

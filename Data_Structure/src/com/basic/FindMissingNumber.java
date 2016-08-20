@@ -2,6 +2,9 @@ package com.basic;
 
 /**
  * Created by gurinder on 24/7/16.
+ *
+ * find missing number in a normal sequence array
+ *
  */
 public class FindMissingNumber {
     public static void main(String[] args) {

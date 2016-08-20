@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by Gurinder on 7/7/2016.
+ *
+ *  check first two numbers with sum zero
  */
 public class SumZeroOfTwoNumber {
 

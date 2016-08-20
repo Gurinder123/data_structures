@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 1/6/16.
+ *
+ *  Palindrome of a string
  */
 public class StringPalindrome {
     public static void main(String[] args) {

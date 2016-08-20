@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * Created by Gurinder on 7/7/2016.
+ *
+ * Reverse words and its characters everything
  */
 public class ReverseWord {
     public static void main(String[] args) {

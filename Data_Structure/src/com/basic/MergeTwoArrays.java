@@ -2,6 +2,8 @@ package com.basic;
 
 /**
  * Created by gurinder on 31/5/16.
+ *
+ * Merge two arrays sort them and remove duplicates
  */
 public class MergeTwoArrays {
 
