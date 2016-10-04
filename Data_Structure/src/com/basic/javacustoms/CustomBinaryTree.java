@@ -11,9 +11,10 @@ public class CustomBinaryTree {
     public static void main(String[] args) {
         MyBinaryTree<Integer> integerMyTree = new MyBinaryTree<>();
         integerMyTree.add(1);
+        integerMyTree.add(-1);
         integerMyTree.add(2);
-        integerMyTree.add(0);
         integerMyTree.add(6);
+        integerMyTree.add(10);
         integerMyTree.add(4);
         integerMyTree.printAll();
     }
@@ -54,28 +55,17 @@ class MyBinaryTree<T> {
     }
 
     public void printAll() {
-        Node parent = node;
-        if (parent == null) {
-            System.out.println("[]");
+        printRecursively(node);
+        System.out.println("");
+    }
+
+    public void printRecursively(Node currRoot) {
+        if (currRoot == null) {
             return;
         }
-        System.out.print("[");
-        Node tempLeft = parent.left;
-        Node tempRight = parent.right;
-        while (tempLeft != null) {
-            if (tempLeft != null)
-                System.out.print(" " + tempLeft.data);
-            if (tempLeft != null)
-                tempLeft = tempLeft.left;
-        }
-        System.out.print(" " + node.data);
-        while (tempRight != null) {
-            if (tempRight != null)
-                System.out.print(" " + tempRight.data);
-            if (tempRight != null)
-                tempRight = tempRight.right;
-        }
-        System.out.print(" ]");
+        printRecursively(currRoot.left);
+        System.out.print(currRoot.data + ", ");
+        printRecursively(currRoot.right);
     }
 
 
