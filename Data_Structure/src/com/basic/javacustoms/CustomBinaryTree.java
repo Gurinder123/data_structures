@@ -55,8 +55,9 @@ class MyBinaryTree<T> {
     }
 
     public void printAll() {
+        System.out.print("[");
         printRecursively(node);
-        System.out.println("");
+        System.out.print("]");
     }
 
     public void printRecursively(Node currRoot) {
@@ -64,7 +65,7 @@ class MyBinaryTree<T> {
             return;
         }
         printRecursively(currRoot.left);
-        System.out.print(currRoot.data + ", ");
+        System.out.print(currRoot.data + " ");
         printRecursively(currRoot.right);
     }
 
