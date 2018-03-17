@@ -24,21 +24,14 @@ public class UrlShortener {
         System.out.println(urlMap.get(id));
     }
 
-    private static long shortUrlToId(String url) {
-        long hash = 0;
+      private static long shortUrlToId(String url) {
+        long id = 0;
 
         for (int i = 0; i < url.length(); i++) {
-            {
-                if ('a' <= url.charAt(i) && url.charAt(i) <= 'z')
-                    hash = hash * 62 + url.charAt(i) - 'a';
-                if ('A' <= url.charAt(i) && url.charAt(i) <= 'Z')
-                    hash = hash * 62 + url.charAt(i) - 'A' + 26;
-                if ('0' <= url.charAt(i) && url.charAt(i) <= '9')
-                    hash = hash * 62 + url.charAt(i) - '0' + 52;
-            }
+             id = id * 62 + key.indexOf(url.charAt(i));
         }
 
-        return hash;
+        return id;
     }
 
     private static String idToShortUrl(long id) {
